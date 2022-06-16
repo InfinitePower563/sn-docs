@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<!--Favicon def-->
+<link rel="apple-touch-icon" sizes="120x120" href="assets\favicon-pack\apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets\favicon-pack\favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets\favicon-pack\favicon-16x16.png">
+<link rel="manifest" href="assets\favicon-pack\site.webmanifest">
+<link rel="mask-icon" href="assets\favicon-pack\safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets\style.css">
+        <title>SimpleNet</title>
+    </head>
+    
+    <body>
+        <div class="title-inline"><img src="assets\logo.png"></div>
+        <div class="title-inline">
+            <h1><span>SimpleNet</span></h1>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="gs.html">Getting Started</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <section class="pad-content">
+                <h2>SimpleNet</h2>
+                <p>SimpleNet is a simple, easy-to-use Java library that you can use to include networking in your program.</p>
+                    <h2>Installation</h2>
+                    <p>
+                        You can install the latest stable version of SimpleNet using these methods:
+<br>
+                        <b>Maven:</b>
+                        <pre>
+<b>Repository def:</b>
+
+<<ab></ab>repository>
+    <<ab></ab>id>SimpleNet<<ab></ab>/id>
+    <<ab></ab>url>https://raw.github.com/InfinitePower563/SimpleNet/master/target/mvn-repo/io/github/infinitepower563/SimpleNet<<ab></ab>/url>
+<<ab></ab>/repository>
+
+<b>Dependency def:</b>
+
+<<ab></ab>dependency>
+    <<ab></ab>groupId>io.github.infinitepower563<<ab></ab>/groupId>
+    <<ab></ab>artifactId>SimpleNet<<ab></ab>/artifactId>
+    <<ab></ab>version>1.0.0<<ab></ab>/version>
+<<ab></ab>/dependency>
+                        </pre>
+                        <b>Gradle:</b>
+                        <pre>
+<b>Repository def:</b>
+
+repository {
+    //other repos
+    maven {
+        url 'https://raw.github.com/InfinitePower563/SimpleNet/master/target/mvn-repo/io/github/infinitepower563/SimpleNet'
+    }
+    mavenCenteral()
+}
+
+<b>Dependency def:</b>
+
+dependencies {
+    //other dependencies
+    compile 'io.github.infinitepower563:SimpleNet:1.0.0'
+}
+</pre>
+                        <b>No Build tool/Default Java:</b>
+                        <pre>
+
+Download SimpleNet <a href="https://github.com/InfinitePower563/SimpleNet/releases/tag/release" class="display">here</a>
+When running your program, include the following option:
+
+java [options] -cp /path/to/SimpleNet.jar yourApp
+                        </pre>
+                    </p>
+                    <h2>Usage</h2>
+                    <p>
+                        You can <a href="docs.html">read the docs</a> to familiarize yourself with the library.
+                        To get started, make a simple http request:
+<br>
+                    </p>
+                    <pre>
+public class RequestExample {
+    public static void main(String[] args) {
+        /*
+        Send an HTTP
+        - GET request
+        - To http://localhost:8000/test
+        - With no input parameters
+        */
+        HttpRequest req = new HttpRequest(RequestType.GET,"http://localhost:800",null);
+        try {
+        //We have no headers, set requestHeaders to 0, and we can pass literally anything to hKey and hVal
+            System.out.println(req.performRequest(0,null,null));
+        } catch (HttpException e) {
+            e.printStackTrace();
+        }
+    }
+}
+                    </pre>
+                    You can also read and familiarize yourself with other examples at our Github repository located <a href="https://github.com/InfinitePower563/SimpleNet" class="display">here</a>
+        </section>
+    
+</body>
+</html>
