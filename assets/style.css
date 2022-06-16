@@ -1,0 +1,32 @@
+.title-inline {
+    display:inline;
+}
+nav {
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li {
+    float: left;
+    padding: 10px;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+a.display {
+    color: blue;
+    text-decoration: none;
+}
+article {
+    text-align: center;
+}
+
+.pad-content {
+    padding: 10px;
+}
